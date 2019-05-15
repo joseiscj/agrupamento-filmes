@@ -12,7 +12,7 @@ library(tidyverse)
 library(here)
 library(cluster)
 library(plotly)
-library(ggdendro)
+#library(ggdendro)
 
 source(here::here("code/lib.R"))
 theme_set(theme_report())
@@ -34,6 +34,8 @@ paleta = c("#404E4D",
 # Para criar data/movies.csv
 import_data("rodrigo_santoro") # ou com o ator/atriz que você escolher
 ```
+
+    O ator escolhido foi o brasileiro Rodrigo Santoro.
 
 ```{r read}
 filmes = read_imported_data()
@@ -166,8 +168,7 @@ atribuicoes %>%
     coord_flip() 
 ```
 
-    
-    
+    Agora, em relação ao sucesso de crítica, temos um primeiro grupo, com nota de pouco menos que 70 até pouco menos de 80. São os 5 filmes mais bem avaliados. No segundo grupo, temos as notas indo de um pouco mais que 40 até um pouco mais que 60. Esse é o grupo mais populoso de filmes, possuindo 9 filmes classificados. Por último, temos os que obtiveram as notas mais baixas. Esse grupo compreende notas de pouco mais que 0 até pouco menos que 30. É o menor grupo em quantidade, possuindo 4 filmes classificados.
 
 
 
